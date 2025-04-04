@@ -1,6 +1,6 @@
 import React from "react"
 import {useDispatch, useSelector} from "react-redux"
-import {addToCurrentNumber, addToDisplay, deleteDisplay, setCurrentPad, addToNumberArray, addToOperationArray} from "./calculationSlice.js"
+import {addToCurrentNumber, addCurrentStateToArray, addToDisplay, deleteDisplay, setCurrentPad, addToNumberArray, addToOperationArray} from "./calculationSlice.js"
 
 
 function SubtractPad () {
@@ -22,11 +22,12 @@ function SubtractPad () {
             return
         } else if (
              operationCond && 
-            !currentNumber === "-"
+            currentNumber !== "-"
         ) {
             dispatch(addToCurrentNumber("-"))
             dispatch(addToDisplay("-"))
             dispatch(setCurrentPad("-"))
+            dispatch(addCurrentStateToArray())
 
         } else if (
             operationCond && 
@@ -40,6 +41,7 @@ function SubtractPad () {
             dispatch(addToCurrentNumber("-"))
             dispatch(addToDisplay("-"))
             dispatch(setCurrentPad("-"))
+            dispatch(addCurrentStateToArray())
 
         } else if (currentPad === "=") {
             dispatch(deleteDisplay())
@@ -47,12 +49,14 @@ function SubtractPad () {
             dispatch(addToNumberArray())
             dispatch(addToOperationArray("-"))
             dispatch(setCurrentPad("-"))
+            dispatch(addCurrentStateToArray())
 
         } else {
             dispatch(addToOperationArray("-"))
             dispatch(addToNumberArray())
             dispatch(addToDisplay("-"))
             dispatch(setCurrentPad("-"))
+            dispatch(addCurrentStateToArray())
         } 
     }
 

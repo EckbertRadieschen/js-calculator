@@ -13,7 +13,7 @@ function clearPad () {
     return (
         <div 
             id="clear" 
-            className="pad double-width clear" 
+            className="pad clear" 
             tabIndex={0}
             onClick={clickHandler}
             >

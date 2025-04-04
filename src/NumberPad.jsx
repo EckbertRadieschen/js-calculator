@@ -1,6 +1,6 @@
 import React from "react"
 import {useDispatch, useSelector} from "react-redux" 
-import {addToCurrentNumber, clear, setCurrentPad, deleteDisplay, addToDisplay} from "./calculationSlice"
+import {addToCurrentNumber, addCurrentStateToArray, clear, setCurrentPad, deleteDisplay, addToDisplay} from "./calculationSlice"
 
 function NumberPad ({id, value, className}) {
 
@@ -21,6 +21,7 @@ function NumberPad ({id, value, className}) {
         dispatch(addToCurrentNumber(value))
         dispatch(setCurrentPad(value))
         dispatch(addToDisplay(value))
+        dispatch(addCurrentStateToArray())
     }
 
     return (

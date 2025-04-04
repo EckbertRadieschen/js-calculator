@@ -114,6 +114,10 @@
   background-color: #a1352c;
 }
 
+.delete {
+  background-color: #c1554C;
+}
+
 .equals:hover, .clear:hover {
   background-color: red;
 }

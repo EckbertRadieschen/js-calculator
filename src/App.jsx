@@ -10,6 +10,7 @@ import ClearPad from "./ClearPad.jsx"
 import EqualsPad from "./EqualsPad.jsx"
 import DecimalPad from "./DecimalPad.jsx"
 import Display from "./Display.jsx"
+import DeletePad from "./DeletePad.jsx"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <div id="first-columns">
           <div id="first-row">
             <ClearPad />
+            <DeletePad />
             <Divide />
           </div>
           <div id="calc-block">

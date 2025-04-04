@@ -1,6 +1,6 @@
 import React from "react"
 import {useSelector, useDispatch} from "react-redux"
-import {setCurrentPad, addToOperationArray, addToNumberArray, deleteDisplay, addToDisplay, deleteCurrentNumber} from "./calculationSlice.js"
+import {setCurrentPad, addCurrentStateToArray, addToOperationArray, addToNumberArray, deleteDisplay, addToDisplay, deleteCurrentNumber} from "./calculationSlice.js"
 
 
 function MultiplyPad () {
@@ -20,6 +20,7 @@ function MultiplyPad () {
             dispatch(addToNumberArray())
             dispatch(addToOperationArray("*"))
             dispatch(setCurrentPad("*"))
+            dispatch(addCurrentStateToArray())
         
         } else {
             dispatch(setCurrentPad("*"))
@@ -27,6 +28,7 @@ function MultiplyPad () {
             dispatch(addToDisplay("x"))
             dispatch(addToNumberArray())
             dispatch(deleteCurrentNumber())
+            dispatch(addCurrentStateToArray())
         }
     }
 

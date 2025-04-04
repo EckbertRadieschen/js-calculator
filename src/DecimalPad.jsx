@@ -1,6 +1,6 @@
 import React from "react"
 import {useDispatch, useSelector} from "react-redux"
-import {addToCurrentNumber, clear, addToDisplay} from "./calculationSlice.js"
+import {addToCurrentNumber, addCurrentStateToArray, clear, addToDisplay} from "./calculationSlice.js"
 
 
 
@@ -16,11 +16,13 @@ function DecimalPad () {
             dispatch(clear())
             dispatch(addToCurrentNumber("0."))
             dispatch(addToDisplay("0."))
+            dispatch(addCurrentStateToArray())
         } else if (currentNumber.includes(".")) {
             return
         } else {
             dispatch(addToCurrentNumber("."))
             dispatch(addToDisplay("."))
+            dispatch(addCurrentStateToArray())
         }
     }
 
