@@ -19,8 +19,64 @@
       format('svg');
 }
 
+@media (max-width: 600px) {
+  #calculator {
+    width: 344px;
+    height: 432px;
+    margin: 160px auto;
+  }
+
+  #display {
+    width: 320px;
+    height: 80px;
+    margin: 8px;
+  }
+
+  .firstLine{
+    width: 320px;
+    padding: 8px;
+    inline-size: 320px;
+    font-size: 22.4px;
+  }
+
+  .secondLine{
+    width: 320px;
+    padding: 8px;
+    font-size: 28px;
+  }
+
+  #all-pads{
+    width:320px;
+    height: 320px;
+    margin: 0 auto 16px auto;
+  }
+
+  #first-columns{
+    width: 240px;
+  }
+
+  #calc-block{
+    width: 240px;
+  }
+
+  .pad{
+    width: 80px;
+    height: 64px;
+    font-size: 30.4px;
+  }
+
+  .double-width{
+    width: 160px;
+  }
+
+  .double-height{
+    height: 128px;
+  }
+}
+
 #calculator {
   width: 430px;
+  height: 540px;
   background-color: #404040;
   margin: 200px auto; 
   padding: 0.1px 0 0.1px 0.1px;
@@ -40,7 +96,7 @@
 
 .firstLine {
   font-family: digital;
-  font-size: 1.4rem;
+  font-size: 28px;
   width: 400px;
   height: 30%;
   padding: 10px;
@@ -50,7 +106,7 @@
 
 .secondLine {
   font-family: digital;
-  font-size: 2.2rem;
+  font-size: 35px;
   width: 400px;
   height: 70%;
   display: flex;
@@ -92,7 +148,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 38px;
   font-weight: bold;
 }
 

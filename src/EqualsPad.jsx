@@ -8,7 +8,7 @@ function EqualsPad () {
     const currentPad = useSelector((state) => state.calculation.currentPad)
 
     const clickHandler = () => {
-        if (currentPad === "=") {
+        if (currentPad === "=" || currentPad === "") {
             return
         } else {
         dispatch(processEquals());
