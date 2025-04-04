@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,87 +7,33 @@
 @font-face {
   font-family: 'Digital';
   src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot');
-  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2')
-      format('woff2'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff')
-      format('woff'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf')
-      format('truetype'),
-    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7')
-      format('svg');
+  src: url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix') format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2') format('woff2'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff') format('woff'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf') format('truetype'),
+    url('//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7') format('svg');
 }
 
-@media (max-width: 600px) {
-  #calculator {
-    width: 344px;
-    height: 432px;
-    margin: 160px auto;
-  }
-
-  #display {
-    width: 320px;
-    height: 80px;
-    margin: 8px;
-  }
-
-  .firstLine{
-    width: 320px;
-    padding: 8px;
-    inline-size: 320px;
-    font-size: 22.4px;
-  }
-
-  .secondLine{
-    width: 320px;
-    padding: 8px;
-    font-size: 28px;
-  }
-
-  #all-pads{
-    width:320px;
-    height: 320px;
-    margin: 0 auto 16px auto;
-  }
-
-  #first-columns{
-    width: 240px;
-  }
-
-  #calc-block{
-    width: 240px;
-  }
-
-  .pad{
-    width: 80px;
-    height: 64px;
-    font-size: 30.4px;
-  }
-
-  .double-width{
-    width: 160px;
-  }
-
-  .double-height{
-    height: 128px;
-  }
+body {
+  overflow-x: hidden; 
 }
 
 #calculator {
-  width: 430px;
-  height: 540px;
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+  margin: 200px auto;
   background-color: #404040;
-  margin: 200px auto; 
-  padding: 0.1px 0 0.1px 0.1px;
+  padding: 0.1px;
   border: 5px solid black;
   border-radius: 20px;
 }
 
 #display {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 100px;
-  margin: 10px auto 10px auto;
+  margin: 10px auto;
   background-color: #BBBBFF;
   border: 3px solid #7777BB;
   border-radius: 6px;
@@ -97,7 +43,8 @@
 .firstLine {
   font-family: digital;
   font-size: 28px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 30%;
   padding: 10px;
   inline-size: 400px;
@@ -107,7 +54,8 @@
 .secondLine {
   font-family: digital;
   font-size: 35px;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 70%;
   display: flex;
   justify-content: end;
@@ -116,30 +64,28 @@
 }
 
 #all-pads {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   margin: 0 auto 20px auto;
 }
 
 #first-columns {
-  width: 300px;
-}
-
-#first-row {
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
 }
 
 #calc-block {
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   display: flex;
   flex-flow: row wrap;
 }
 
 .pad {
-  width: 100px;
+  width: 33.33%;
   height: 80px;
   background-color: #FF8050;
   color: black;
@@ -159,7 +105,7 @@
 }
 
 .double-width {
-  width: 200px;
+  width: 66.66%;
 }
 
 .double-height {
@@ -176,4 +122,53 @@
 
 .equals:hover, .clear:hover {
   background-color: red;
+}
+
+@media (max-width: 600px) {
+  #calculator {
+    margin: 100px auto;
+    width: 100%;
+    max-width: 344px;
+  }
+
+  #display {
+    width: 100%;
+    max-width: 320px;
+    height: 80px;
+    margin: 8px auto;
+  }
+
+  .firstLine,
+  .secondLine {
+    width: 100%;
+    max-width: 320px;
+    font-size: 22px;
+    padding: 8px;
+  }
+
+  #all-pads {
+    width: 100%;
+    max-width: 320px;
+    height: 320px;
+    margin: 0 auto 16px auto;
+  }
+
+  #first-columns, #calc-block {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .pad {
+    width: 33.33%;
+    height: 64px;
+    font-size: 24px;
+  }
+
+  .double-width {
+    width: 66.66%;
+  }
+
+  .double-height {
+    height: 128px;
+  }
 }
